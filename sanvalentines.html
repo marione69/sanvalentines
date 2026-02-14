@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Bubu & Dudu 💕</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(135deg, #ffd6e8, #ffeef5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      max-width: 320px;
+    }
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
+    h1 {
+      color: #ff5fa2;
+      font-size: 22px;
+      margin: 15px 0;
+    }
+    button {
+      border: none;
+      border-radius: 15px;
+      padding: 12px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 10px;
+      transition: 0.3s;
+    }
+    #yes {
+      background: #ff5fa2;
+      color: white;
+    }
+    #no {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="page1">
+    <img src="prima.png">
+    <h1>Vuoi essere il mio San Valentino? 💘</h1>
+    <button id="yes" onclick="goLove()">SÌ 💕</button>
+    <button id="no" onclick="growYes()">NO 🙃</button>
+  </div>
+
+  <div class="card" id="page2" style="display:none;">
+    <img src="seconda.png">
+    <h1>Sapevo che avresti detto SÌ 🥹💖</h1>
+    <h1>Bubu & Dudu per sempre 🐻🐼</h1>
+  </div>
+
+  <script>
+    let size = 18;
+    function growYes() {
+      size += 8;
+      document.getElementById("yes").style.fontSize = size + "px";
+    }
+    function goLove() {
+      document.getElementById("page1").style.display = "none";
+      document.getElementById("page2").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
